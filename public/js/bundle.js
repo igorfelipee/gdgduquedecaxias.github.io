@@ -63,14 +63,61 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports) {
 
-angular.module('gdgsite', ['MeetupFactory', 'MeetupCtrl'])
+angular.module('gdgsite.controllers', [])
+
+.controller('MeetupCtrl', function($scope, $http, MeetupFactory) {
+    //$scope.json = MeetupFactory.data.getEvents();
+    MeetupFactory.getEvents().then(function(res) {
+        $scope.events = res.data.results
+    }, function(err) {
+        if (err.status == 404) {
+            console.log('socorro');
+        }
+    });
+});
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+angular.module('gdgsite.services', [])
+
+.factory('MeetupFactory', function($http) {
+
+    return {
+
+        getEvents: function(success) {
+            return $http.get('https://api.meetup.com/2/events?group_urlname=GDGDuquedeCaxias&status=past,upcoming');
+        }
+
+    }
+})
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var controllerMeetup =  __webpack_require__(0);
+var services =  __webpack_require__(1);
+
+angular.module('gdgsite', ['gdgsite.controllers', 'gdgsite.services']);
+
+(function (){
+  if ('serviceWorker' in navigator) {
+     navigator.serviceWorker
+              .register('./../sw.js')
+              .then(function() { console.log('ServiceWorker Registrado')});
+   }
+}());
 
 
 /***/ })
