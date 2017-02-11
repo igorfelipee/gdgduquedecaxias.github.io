@@ -1,1 +1,1 @@
-angular.module('gdgsite', ['MeetupFactory', 'MeetupCtrl'])
+angular.module('gdgsite', ['gdgsite.controllers', 'gdgsite.services']);
