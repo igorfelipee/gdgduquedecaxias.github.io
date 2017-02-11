@@ -1,11 +1,12 @@
 angular.module('gdgsite.services', [])
-.factory('MeetupFactory', function($http){
 
-  return {
+.factory('MeetupFactory', function($http) {
 
-  getEvents: function(success){
-    return $http.get('https://api.meetup.com/2/events?group_urlname=GDGDuquedeCaxias&status=past,upcoming');
-  }
+    return {
 
-}
+        getEvents: function(success) {
+            return $http.get('https://api.meetup.com/2/events?group_urlname=GDGDuquedeCaxias&status=past,upcoming');
+        }
+
+    }
 })
