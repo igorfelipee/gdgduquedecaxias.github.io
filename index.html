@@ -15,21 +15,25 @@
 </head>
 
 <body>
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Sobre</a>
+      <a href="#">Projetos</a>
+      <a href="#">Contatos</a>
+    </nav>
+  </header>
     <section ng-controller="MeetupCtrl">
         <div class="" ng-repeat="event in events track by $index">
             <span>{{event.description}}</span>
             <a ng-href="{{event.event_url}}">{{event.event_url}}</a>
         </div>
     </section>
-    <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Sobre</a>
-            <a href="#">Projetos</a>
-            <a href="#">Contatos</a>
-        </nav>
-    </header>
-    <section></section>
+    <section ng-controller="GitHubCtrl">
+        <div class="" ng-repeat="repo in repos track by $index">
+          <a ng-href="{{repo.html_url}}">{{repo.name}}</a>
+        </div>
+    </section>
     <section></section>
     <section></section>
     <section></section>
