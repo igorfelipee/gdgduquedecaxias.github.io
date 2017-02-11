@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html ng-app="gdgsite">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="theme-color" content="#2196F3">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#577ec0">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     <script src="src/js/app.js"></script>
     <script src="src/js/services.js"></script>
     <script src="src/js/controller-meetup.js"></script>
     <title>Google Developers Group Duque de Caxias</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <script src="public/js/script.js"></script>
 </head>
+
 <body>
-  <section ng-controller="MeetupCtrl">
-    {{json}}
-  </section>
   <header>
-    <nav></nav>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Sobre</a>
+      <a href="#">Projetos</a>
+      <a href="#">Contatos</a>
+    </nav>
   </header>
-  <section></section>
-  <section></section>
-  <section></section>
-  <section></section>
-  <footer></footer>
+    <section ng-controller="MeetupCtrl">
+        <div class="" ng-repeat="event in events track by $index">
+            <span>{{event.description}}</span>
+            <a ng-href="{{event.event_url}}">{{event.event_url}}</a>
+        </div>
+    </section>
+    <section ng-controller="GitHubCtrl">
+        <div class="" ng-repeat="repo in repos track by $index">
+          <a ng-href="{{repo.html_url}}">{{repo.name}}</a>
+        </div>
+    </section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <footer></footer>
 </body>
+
 </html>
