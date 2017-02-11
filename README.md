@@ -9,4 +9,4 @@ Nossa ideia é ter o site como uma Progressive Web App pois assim podemos inform
 mais facilmente por meio de push notification os meetups que vão rolar e todos os
 outros acontecimentos relacionados a nossa comunidade.
 
-[[./src/img/gdg.png|alt=Layout novo site GDG Duque de Caxias]]
+![Layout novo site GDG Duque de Caxias](./src/img/gdg.png)
