@@ -1,0 +1,31 @@
+{
+  "name": "gdg-site",
+  "version": "2.0.0",
+  "description": "Google Developers Group Duque de Caxias - Web Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GDGDuqueDeCaxias/gdgduquedecaxias.github.io.git"
+  },
+  "keywords": [
+    "GDG",
+    "Google",
+    "Developers",
+    "Group",
+    "Developers"
+  ],
+  "author": "GDG Duque de Caxias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GDGDuqueDeCaxias/gdgduquedecaxias.github.io/issues"
+  },
+  "homepage": "https://github.com/GDGDuqueDeCaxias/gdgduquedecaxias.github.io#readme",
+  "devDependencies": {
+    "angular": "^1.6.2",
+    "gulp": "^3.9.1",
+    "webpack": "^2.2.1"
+  }
+}
