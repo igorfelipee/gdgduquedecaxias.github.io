@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,700|Raleway:700');
 @import 'helpers/variables';
 @import 'helpers/mixins';
 @import 'base/base';
+@import '../../node_modules/normalize.css';
 @import 'layout/layout';
 @import 'module/menu';
 @import 'module/footer';
